@@ -16,5 +16,33 @@ public class Ex02 {
         long l = 9_223_372_036_854_775_807L; // 8바이트, 64비트
         // L을 붙여야하는데...
         // 한도가 엄청 크다
+        System.out.println("i = " + i);
+        System.out.println("l = " + l);
+        // long의 범위를 넘어가면 'BigInteger'
+
+        // 숫자 - 실수형
+        float f = 3.141592f; // 32비트(4바이트)의 단정밀도 - 7자리수까지 문제 없이
+        double d = 3.141592; // 64비트(8바이트) - 15~16자리.
+        System.out.println("f = " + f);
+        System.out.println("d = " + d);
+        // 부동소수점 -> 컴퓨터는 0,1을 사용해서 2진수의 숫자체계를 가지고 우리는 10진수를 가져서
+        // 특히 소수를 표현할 때는 약간의 오차가 있음.
+        // BigDecimal (더 높은 정밀도가 요청되거나 부동소수점 이슈를 해결하기 위해...)
+
+        // 정수형 - int (접미사 X) 알고리즘, 큰수, 대규모데이터를 다룰 경우 long. 파일을 다룰 때 byte.
+        // 실수형 - double
+
+        // 문자형 char
+        System.out.println("A " + ('A' + 0) + " Z " + ('Z' + 0)); // 65 ~ 90
+        System.out.println("a " + ('a' + 0) + " z " + ('z' + 0)); // 97 ~ 122
+        char c1 = 91;
+        char c2 = 123;
+        System.out.println(c1 + " " + c2);
+        // 대문자에 32를 빼면 소문자가 되고, 소문자에 32를 더하면 대문자가 됨. (알파벳기준)
+
+        // 불리언 true/false
+        boolean b1 = true;
+        boolean b2 = false;
+        System.out.println(b1 + " " + b2);
     }
 }
