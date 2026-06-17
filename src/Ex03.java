@@ -13,6 +13,7 @@ public class Ex03 {
         String w2 = sc.next(); // 스페이스를 만나기 전까지는 대기한다
         System.out.println("w1 = " + w1);
         System.out.println("w2 = " + w2); // \n
+        sc.nextLine(); // 이걸 중간에 끼어넣으면 중간에 들어간 \n 를 없앨 수 있음.
         String w3 = sc.nextLine(); // \n을 만나면 버퍼 종료 (지금까지 받은 데이터를 모두 버퍼에서 제거하고 변수에 대입)
         System.out.println("w3 = " + w3);
         String w4 = sc.nextLine(); // 이건 입력을 대기해준다
@@ -25,5 +26,7 @@ public class Ex03 {
         String line = sc.nextLine(); // 엔터까지를 다 읽음
         System.out.println("line = " + line);
         System.out.println("종료");
+
+        sc.close();
     }
 }
