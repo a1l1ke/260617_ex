@@ -24,5 +24,27 @@ public class Ex04 {
         System.out.println(Math.pow(2, 2));
         System.out.println(Math.pow(2, 0.5));
         System.out.println(Math.random()); // 0 이상인 1 미만의 값.
+
+        // 3. 문자열 연결 - +시 자동형변환 but 문제는 가끔씩 문자열화했을 때 기대랑 다른 타입들이 존재
+        System.out.println("흥미로운 것 " + 10 + 20);
+        System.out.println("흥미로운 것 " + (10 + 20)); // 헷갈리는게 심하면 변수로 빼서 집어넣으면 된다
+        int i1 = 10;
+        int i2 = 20;
+        int i3 = i1 + i2;
+        System.out.println("흥미로운 것 " + i3);
+
+        // 4. 문자열의 비교
+        String a1 = "Java";
+        String a2 = "Java"; // 리터럴 문법으로 만들어서 '상수 풀'이라는 곳에 생성 -> 같은 방식으로 만들어졌다고 판정이 되면 같은 객체 주
+        System.out.println("a1 == a2 " + (a1 == a2));
+        System.out.println("a1 " + System.identityHashCode(a1));
+        System.out.println("a2 " + System.identityHashCode(a2));
+        String a3 = new String("Java"); // 직접 만든 객체이기 때문에 '힙 영역'으로 새롭게 감
+        System.out.println("a1 = " + a1);
+        System.out.println("a3 = " + a3);
+        System.out.println("a1 == a3 " + (a1 == a3));
+        System.out.println("a1 " + System.identityHashCode(a1));
+        System.out.println("a3 " + System.identityHashCode(a3));
+        System.out.println("a1.equals(a3) " + a1.equals(a3));
     }
 }
