@@ -44,5 +44,28 @@ public class Ex02 {
         boolean b1 = true;
         boolean b2 = false;
         System.out.println(b1 + " " + b2);
+
+        // 문자, 문자열, 문자배열
+        char cc1 = 'A';
+        char cc2 = 'B';
+        char cc3 = 'C';
+        System.out.println(cc1 + "" + cc2 + "" + cc3);
+        char[] carr = {cc1, cc2, cc3};
+        System.out.println(carr);
+        String ss = "ABC";
+        System.out.println(ss);
+
+        // 암(묵)시적 형변환, 명시적 형변환
+        long lll = 123; // 들어가짐 -> long이 차지할 수 있는 메모리가 더 넓기 때문에 굳이 뭔가 의식할 필요가 없음
+//        int iii = 3_145_920_000L; // 들어가지 못함;
+        int iii = (int) 3_145_920_000L; // 들어가지 못함;
+        // 64비트를 32비트에 우겨넣는 과정에서 일부만 들어감
+        int iii2 = 'a';
+        System.out.println("iii = " + iii);
+        double dd = 1;
+        int iii3 = (int) 3.141592;
+        System.out.println("dd = " + dd);
+        System.out.println("iii3 = " + iii3); // 소수점 부분을 탈락시키면 정수부로 넣을 수 있으니 그쪽 메모리를 탈락
+
     }
 }
